@@ -1,8 +1,8 @@
-#qna{
+#qna {
   display: none;
 }
 
-.qBox{
+.qBox {
   background-color: whitesmoke;
   text-align: center;
   border-radius: 20px;
@@ -10,7 +10,7 @@
   width: 80%;
 }
 
-.answerList{
+.answerList {
   background-color: whitesmoke;
   border-radius: 20px;
   border: 0px;
@@ -19,7 +19,26 @@
   width: 80%;
 }
 
-.answerList:hover, .answerList:focus{ /* button 느낌으로 꾸미기 */
+.answerList:hover, .answerList:focus {
+  /* button 느낌으로 꾸미기 */
   background-color: pink;
   color: whitesmoke;
+}
+
+.status {
+  height: 20px;
+  width: 80%;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.statusBar {
+  height: 100%;
+  border-radius: 20px;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#febbbb+0,fe9090+46,ff5c5c+100;Red+3D+%231 */
+  background: #febbbb;  /* Old browsers */
+  background: -moz-linear-gradient(left, #febbbb 0%, #fe9090 46%, #ff5c5c 100%);  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #febbbb 0%, #fe9090 46%, #ff5c5c 100%);  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #febbbb 0%, #fe9090 46%, #ff5c5c 100%);  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#febbbb', endColorstr='#ff5c5c', GradientType=1);  /* IE6-9 */
 }
