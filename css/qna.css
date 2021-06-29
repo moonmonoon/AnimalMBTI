@@ -1,3 +1,25 @@
 #qna{
   display: none;
 }
+
+.qBox{
+  background-color: whitesmoke;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 24px;
+  width: 80%;
+}
+
+.answerList{
+  background-color: whitesmoke;
+  border-radius: 20px;
+  border: 0px;
+  display: block;
+  font-size: 20px;
+  width: 80%;
+}
+
+.answerList:hover, .answerList:focus{ /* button 느낌으로 꾸미기 */
+  background-color: pink;
+  color: whitesmoke;
+}

@@ -5,6 +5,11 @@ function addAnswer(answerText, qIdx){
   var a = document.querySelector('.answerBox');
   var answer = document.createElement('button');
   answer.classList.add('answerList');
+  answer.classList.add('my-3');
+  answer.classList.add('py-3');
+  answer.classList.add('mx-auto');
+  answer.classList.add('fadeIn');
+
   a.appendChild(answer); //answer가 a에 소속되도록 관계를 만듬
   answer.innerHTML = answerText;
 
@@ -12,10 +17,17 @@ function addAnswer(answerText, qIdx){
     var children = document.querySelectorAll('.answerList');
     for(let i = 0; i < children.length; i++){
       children[i].disabled = true;
-      children[i].style.display = 'none';
+      children[i].style.WebkitAnimation = "fadeOut 0.5s";
+      children[i].style.animation = "fadeOut 0.5s";
+      // children[i].style.display = 'none';
     }
-    goNext(++qIdx);
-    }, false);
+    setTimeout(() => {
+      for(let i = 0; i < children.length; i++){
+        children[i].style.display = 'none';
+      }
+      goNext(++qIdx);
+    }, 450)
+  }, false);
 }
 function goNext(qIdx){
   var q = document.querySelector('.qBox');
