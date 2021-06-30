@@ -84,7 +84,7 @@ function addAnswer(answerText, qIdx, idx) {
     }
     setTimeout(() => {
       var target = qnaList[qIdx].a[idx].type; // 몇번째 질문에서 몇번 버튼을 선택했는지
-      for (let i = 0; i < target.length; j++) {
+      for (let i = 0; i < target.length; i++) {
         select[target[i]] += 1;
       }
 
