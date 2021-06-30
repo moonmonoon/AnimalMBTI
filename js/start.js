@@ -2,10 +2,10 @@ const main = document.querySelector("#main");
 const qna = document.querySelector("#qna");
 const result = document.querySelector("#result");
 const endPoint = 12;
-const select = [];
+const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,];
 
 function calResult() { // 가장 많이 선택한 타입(동물) 계산
-  var pointArray = [
+/*  var pointArray = [
     { name: 'mouse', value: 0, key: 0 },
     { name: 'cow', value: 0, key: 1 },
     { name: 'tiger', value: 0, key: 2 },
@@ -40,9 +40,11 @@ function calResult() { // 가장 많이 선택한 타입(동물) 계산
     }
     return 0;
   });
-  console.log(resultArray); //제대로 함수를 부여했는지
-  let resultword = resultArray[0].key;
-  return resultword;
+*/ // addAnswer 함수 수정
+
+  // select 배열의 최대값 가진 인덱스 호출, 반환
+  var result = select.indexOf(Math.max(...select));
+  return result;
 }
 
 function goResult() {
@@ -81,7 +83,11 @@ function addAnswer(answerText, qIdx, idx) {
       // children[i].style.display = 'none';
     }
     setTimeout(() => {
-      select[qIdx] = idx; // 몇번째 질문에서 몇번 버튼을 선택했는지
+      var target = qnaList[qIdx].a[idx].type; // 몇번째 질문에서 몇번 버튼을 선택했는지
+      for (let i = 0; i < target.length; j++) {
+        select[target[i]] += 1;
+      }
+
       for (let i = 0; i < children.length; i++) {
         children[i].style.display = 'none';
       }
