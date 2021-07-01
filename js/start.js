@@ -5,7 +5,7 @@ const endPoint = 12;
 const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,];
 
 function calResult() { // 가장 많이 선택한 타입(동물) 계산
-/*  var pointArray = [
+  /*  var pointArray = [
     { name: 'mouse', value: 0, key: 0 },
     { name: 'cow', value: 0, key: 1 },
     { name: 'tiger', value: 0, key: 2 },
@@ -46,6 +46,7 @@ function calResult() { // 가장 많이 선택한 타입(동물) 계산
   var result = select.indexOf(Math.max(...select));
   return result;
 }
+
 function setResult() {
   let point = calResult();
   const resultName = document.querySelector('.resultName');
@@ -62,6 +63,7 @@ function setResult() {
   const resultDesc = document.querySelector('.resultDesc');
   resultDesc.innerHTML = infoList[point].desc;
 }
+
 function goResult() {
   qna.style.WebkitAnimation = "fadeOut 1s";
   qna.style.animation = "fadeOut 1s";
