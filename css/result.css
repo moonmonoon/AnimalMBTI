@@ -6,6 +6,13 @@
   border-radius: 20px;
 }
 
+#shareResult{
+  background-color: whitesmoke;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+}
+
 .resultName{
   font-size: 26px;
 }
@@ -25,4 +32,18 @@
 .kakao:hover, .kakao:focus {
   background-color: whitesmoke;
   color: #FEE500;
+}
+
+.gohome{
+  color: white;
+  background-color: pink;
+  font-size: 20px;
+  border: 0px;
+  border-radius: 20px;
+}
+
+/* button 느낌으로 꾸미기 */
+.gohome:hover, .gohome:focus {
+  background-color: whitesmoke;
+  color: pink;
 }
